@@ -5,12 +5,14 @@
 class NetstreamMvn321 < Formula
   homepage ""
   url "https://github.com/peterfich/netstream-mvn-3.2.1/archive/0.0.2.tar.gz"
-  version "0.1"
+  version "0.2"
   sha256 "351e2db2eff90aba254fd574fe5c91ff08876d81f5524d4de5475e9564c4f50f"
 
+  keg_only
+  
   def install
     mkdir_p '/easy'
     cp_r 'apache-maven-3.2.1', '/easy'
-    bin.install '/easy/apache-maven-3.2.1/bin/mvn'
+    bin.install_symlink '/easy/apache-maven-3.2.1/bin/mvn'
   end
 end
