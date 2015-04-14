@@ -11,6 +11,6 @@ class NetstreamMvn321 < Formula
   def install
     mkdir_p '/easy'
     cp_r 'apache-maven-3.2.1', '/easy'
-    install_symlink '/easy/apache-maven-3.2.1/bin/mvnDebug' 
+    bin.install_symlink '/easy/apache-maven-3.2.1/bin/mvnDebug' 
   end
 end
